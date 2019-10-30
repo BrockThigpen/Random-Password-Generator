@@ -11,22 +11,25 @@
     <script src="script.js"></script>
 </head>
 <body>
-
+    <!-- navbar -->
     <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="##">Random Password Generator</a>
     </nav>
-
+    <!-- main content -->
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-sm-12">
+            <div class="col-lg-8 col-sm-12 mx-auto">
                 <div class="content">
                     <h4>Random Password Generator</h4>
+                    <hr/>
                     <div class="result-container">
-                        <span id="result"></span>
-                        <br/>
+                        <input type="text" id="result">
+                        <hr/>
+                        <!-- generate btn -->
                         <button class="btn btn-large" id="generate">
                             Generate password
                         </button>
+                        <!-- clipboard btn -->
                         <button class="btn btn-large" id="clipboard">
                             Copy to Clipboard
                         </button>
@@ -35,6 +38,5 @@
             </div>
         </div>
     </div>
-    
 </body>
 </html>
