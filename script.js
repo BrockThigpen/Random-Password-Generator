@@ -9,6 +9,15 @@ const randomFunc = {
     number: randomNumber,
     symbol: randomSymbols
 };
+// initializing
+let displayPwd;
+let passwordSplit;
+let useLower;
+let useUpper;
+let useNumbers;
+let useSymbols;
+let length;
+// user input and validation
 function validate() {
     length = parseInt(prompt('Enter the length of your password. Must be a number between 8 and 128.'));
     if(length > 7 && length < 129) {
