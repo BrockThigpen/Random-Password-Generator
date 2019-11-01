@@ -92,6 +92,6 @@ function randomNumber() {
 }
 // random symbol
 function randomSymbols() {
-    let symbols = '!"#$%&()*+,-./:;<=>?@[]^_{|}~';
+    let symbols = '!"#$%&()*+,-./ :;<=>?@[]^_{|}~';
     return symbols[Math.floor(Math.random() * symbols.length)];
 }
