@@ -33,6 +33,30 @@ function validate() {
         validate();
     }
 }
+//THE MAGIC!!
+function generatePassword(lower, upper, number, symbol, length) {
+    let generatedPassword = '';
+    let typesCount = lower || upper || number || symbol;
+    let typesArr = [{lower}, {upper}, {number}, {symbol}].filter(
+        item => Object.values(item)[0]
+    );
+    if(!typesCount) {
+        return '';
+    }
+    for(let i = 0; i < length; i += typesCount) {
+        typesArr.forEach(type => {
+            let funcName = Object.keys(type)[0];
+            generatedPassword += randomFunc[funcName]();
+        });
+    }
+    finalPassword = generatedPassword.slice(0, length);
+    passwordSplit = finalPassword.split('', length);
+    displayPwd = passwordSplit.sort( () => {return 0.5 - Math.random()});    
+    update();
+}
+function update() {    
+    resultEl.value = displayPwd.join('');
+}
 function randomLower() {
     return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 }
