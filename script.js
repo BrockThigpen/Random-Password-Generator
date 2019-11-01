@@ -9,6 +9,21 @@ const randomFunc = {
     number: randomNumber,
     symbol: randomSymbols
 };
+function validate() {
+    length = parseInt(prompt('Enter the length of your password. Must be a number between 8 and 128.'));
+    if(length > 7 && length < 129) {
+        useLower = confirm('Would you like to use lowercase letters in the password?');
+        useUpper = confirm('Would you like to use uppercase letters in the password?');
+        useNumbers = confirm('Would you like to use numbers in the password?');
+        useSymbols = confirm('Would you like to use symbols in the password?');
+    } else if (isNaN(length)) {
+        alert('Not a number. Please enter a number between 8 and 128.');
+        validate();
+    } else {
+        alert('Not a valid number. Please enter a number between 8 and 128.');
+        validate();
+    }
+}
 function randomLower() {
     return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 }
