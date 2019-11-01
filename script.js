@@ -33,6 +33,18 @@ function validate() {
         validate();
     }
 }
+// generate btn event
+generateEl.addEventListener('click', () => {
+    //call functions
+    validate();
+    generatePassword(
+        useLower, 
+        useUpper, 
+        useNumbers, 
+        useSymbols, 
+        length
+    );
+});
 //THE MAGIC!!
 function generatePassword(lower, upper, number, symbol, length) {
     let generatedPassword = '';
