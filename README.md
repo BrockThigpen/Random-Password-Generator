@@ -1,2 +1,6 @@
 # Random-Password-Generator
-Random Password Generator
+Created with HTML, CSS, and JavaScript.
+
+The deployed GitHub page can be found here: https://brockthigpen.github.io/Random-Password-Generator/
+
+
