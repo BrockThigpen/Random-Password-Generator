@@ -1,10 +1,21 @@
 .content{
-    margin-top: 10px;
+    margin-top: 70px;
     margin-bottom: 10px;
-    background-color: aqua;
+    background-color: #343a40;
     padding: 20px;
     width: 100%;
+    color: #ffffff;
 }
 #result{
     width: 100%;
+}
+.btn{
+    color: #ffffff;
+}
+.btn:focus {
+    outline: none;
+}
+.btn:hover {
+    color: #fff !important;
+    text-decoration: none;
 }
