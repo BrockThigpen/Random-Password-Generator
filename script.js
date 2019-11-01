@@ -45,6 +45,16 @@ generateEl.addEventListener('click', () => {
         length
     );
 });
+//clipboard btn event
+clipboard.addEventListener('click', () => {
+    if(resultEl.value === '') {
+        return;
+    } else {
+        resultEl.select();
+        document.execCommand("copy");
+        alert('Password copied to clipboard.');
+    }          
+});
 //THE MAGIC!!
 function generatePassword(lower, upper, number, symbol, length) {
     let generatedPassword = '';
