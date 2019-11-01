@@ -31,6 +31,10 @@ function validate() {
         alert('Not a valid number. Please enter a number between 8 and 128.');
         validate();
     }
+    if (useLower == false && useUpper == false && useNumbers == false && useSymbols == false) {
+        alert('At least one character type needs to be selected.');
+        validate();
+    }
 }
 // generate btn event
 generateEl.addEventListener('click', () => {
@@ -61,16 +65,13 @@ function generatePassword(lower, upper, number, symbol, length) {
     let typesArr = [{lower}, {upper}, {number}, {symbol}].filter(
         item => Object.values(item)[0]
     );
-    if(!typesCount) {
-        return '';
-    }
     for(let i = 0; i < length; i += typesCount) {
         typesArr.forEach(type => {
             let funcName = Object.keys(type)[0];
             generatedPassword += randomFunc[funcName]();
         });
     }
-    let passwordSplit = generatedPassword.split('', length);
+    passwordSplit = generatedPassword.split('', length);
     displayPwd = passwordSplit.sort( () => {return 0.5 - Math.random()});    
     update();
 }
