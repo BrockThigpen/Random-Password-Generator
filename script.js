@@ -11,7 +11,6 @@ const randomFunc = {
 };
 // initializing
 let displayPwd;
-let passwordSplit;
 let useLower;
 let useUpper;
 let useNumbers;
@@ -71,8 +70,7 @@ function generatePassword(lower, upper, number, symbol, length) {
             generatedPassword += randomFunc[funcName]();
         });
     }
-    finalPassword = generatedPassword.slice(0, length);
-    passwordSplit = finalPassword.split('', length);
+    let passwordSplit = generatedPassword.split('', length);
     displayPwd = passwordSplit.sort( () => {return 0.5 - Math.random()});    
     update();
 }
