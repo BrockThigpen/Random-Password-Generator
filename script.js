@@ -3,6 +3,12 @@ const resultEl = document.getElementById('result');
 const generateEl = document.getElementById('generate');
 const clipboard = document.getElementById('clipboard');
 // random lowercase letter
+const randomFunc = {
+    lower: randomLower,
+    upper: randomUpper,
+    number: randomNumber,
+    symbol: randomSymbols
+};
 function randomLower() {
     return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 }
