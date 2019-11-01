@@ -2,7 +2,7 @@
 const resultEl = document.getElementById('result');
 const generateEl = document.getElementById('generate');
 const clipboard = document.getElementById('clipboard');
-// random lowercase letter
+// object for random generated characters
 const randomFunc = {
     lower: randomLower,
     upper: randomUpper,
@@ -79,6 +79,7 @@ function generatePassword(lower, upper, number, symbol, length) {
 function update() {    
     resultEl.value = displayPwd.join('');
 }
+// random lowercase letter
 function randomLower() {
     return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 }
